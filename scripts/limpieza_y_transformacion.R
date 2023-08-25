@@ -165,3 +165,7 @@ matrimonios$edad_con2[is.na(matrimonios$edad_con2)] <- median(matrimonios$edad_c
 # guardar resultado
 
 write.csv(matrimonios, './resultados/conjunto_de_datos/matrimonios.csv')
+
+sum(is.na(matrimonios$ocup_con1) & is.na(matrimonios$ocup_con2))
+sum(is.na(matrimonios$ocup_con1) & !is.na(matrimonios$ocup_con2))
+sum(!is.na(matrimonios$ocup_con1) & is.na(matrimonios$ocup_con2))

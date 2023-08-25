@@ -5,7 +5,7 @@ diccionario <- read.csv('./fuentes/diccionario_de_datos/diccionario_de_datos_mat
 
 ## Localidad
 
-catemima21 <- read.csv('./fuente/catalogos/catemlma21.csv', encoding = 'UTF-8')
+catemima21 <- read.csv('./fuentes/catalogos/catemlma21.csv', encoding = 'UTF-8')
 
 matrimonios$loc_regis <- catemima21$nom_loc[match(
   paste(matrimonios$ent_regis, matrimonios$mun_regis, matrimonios$loc_regis),
@@ -24,7 +24,7 @@ matrimonios$locrh_con2 <- catemima21$nom_loc[match(
 
 ## Tamaño de localidad
 
-tamano_localidad <- read.csv('./fuente/catalogos/tamano_localidad.csv')
+tamano_localidad <- read.csv('./fuentes/catalogos/tamano_localidad.csv')
 
 matrimonios$tam_loc_re <- tamano_localidad$descripcion[match(matrimonios$tam_loc_re, tamano_localidad$clave)]
 matrimonios$tlorh_con1 <- tamano_localidad$descripcion[match(matrimonios$tlorh_con1, tamano_localidad$clave)]
@@ -32,19 +32,19 @@ matrimonios$tlorh_con2 <- tamano_localidad$descripcion[match(matrimonios$tlorh_c
 
 ## Régimen matrimonial
 
-regimen_matrimonial <- read.csv('./fuente/catalogos/regimen_matrimonial.csv')
+regimen_matrimonial <- read.csv('./fuentes/catalogos/regimen_matrimonial.csv')
 
 matrimonios$regimen_ma <- regimen_matrimonial$descripcion[match(matrimonios$regimen_ma, regimen_matrimonial$clave)]
 
 ## Género
 
-genero <- read.csv('./fuente/catalogos/genero.csv')
+genero <- read.csv('./fuentes/catalogos/genero.csv')
 
 matrimonios$genero <- genero$descripcion[match(matrimonios$genero, genero$clave)]
 
 ## Condición biológica
 
-condicion_biologica <- read.csv('./fuente/catalogos/condicion_biologica.csv')
+condicion_biologica <- read.csv('./fuentes/catalogos/condicion_biologica.csv')
 
 matrimonios$sexo_con1 <- condicion_biologica$descripcion[match(matrimonios$sexo_con1, condicion_biologica$clave)]
 matrimonios$sexo_con2 <- condicion_biologica$descripcion[match(matrimonios$sexo_con2, condicion_biologica$clave)]
@@ -56,28 +56,28 @@ matrimonios$edad_con2 <- ifelse(matrimonios$edad_con2 == 99, NA, matrimonios$eda
 
 ## Nacionalidad
 
-nacionalidad <- read.csv('./fuente/catalogos/nacionalidad.csv')
+nacionalidad <- read.csv('./fuentes/catalogos/nacionalidad.csv')
 
 matrimonios$naci_con1 <- nacionalidad$descripcion[match(matrimonios$naci_con1, nacionalidad$clave)]
 matrimonios$naci_con2 <- nacionalidad$descripcion[match(matrimonios$naci_con2, nacionalidad$clave)]
 
 ## Ocupación
 
-ocupacion <- read.csv('./fuente/catalogos/ocupacion.csv')
+ocupacion <- read.csv('./fuentes/catalogos/ocupacion.csv')
 
 matrimonios$ocup_con1 <- ocupacion$descripcion[match(matrimonios$ocup_con1, ocupacion$clave)]
 matrimonios$ocup_con2 <- ocupacion$descripcion[match(matrimonios$ocup_con2, ocupacion$clave)]
 
 ## Escolaridad
 
-escolaridad <- read.csv('./fuente/catalogos/escolaridad.csv')
+escolaridad <- read.csv('./fuentes/catalogos/escolaridad.csv')
 
 matrimonios$escol_con1 <- escolaridad$descripcion[match(matrimonios$escol_con1, escolaridad$clave)]
 matrimonios$escol_con2 <- escolaridad$descripcion[match(matrimonios$escol_con2, escolaridad$clave)]
 
 ## Contrayente trabaja
 
-contrayente_trabaja <- read.csv('./fuente/catalogos/contrayente_trabaja.csv')
+contrayente_trabaja <- read.csv('./fuentes/catalogos/contrayente_trabaja.csv')
 
 matrimonios$conactcon1 <- contrayente_trabaja$descripcion[match(matrimonios$conactcon1, contrayente_trabaja$clave)]
 
@@ -85,21 +85,21 @@ matrimonios$conactcon2 <- contrayente_trabaja$descripcion[match(matrimonios$cona
 
 ## Situación laboral del contrayente
 
-situacion_laboral_contrayente <- read.csv('./fuente/catalogos/situacion_laboral_contrayente.csv')
+situacion_laboral_contrayente <- read.csv('./fuentes/catalogos/situacion_laboral_contrayente.csv')
 
 matrimonios$sitlabcon1 <- situacion_laboral_contrayente$descripcion[match(matrimonios$sitlabcon1, situacion_laboral_contrayente$clave)]
 matrimonios$sitlabcon2 <- situacion_laboral_contrayente$descripcion[match(matrimonios$sitlabcon2, situacion_laboral_contrayente$clave)]
 
 ## Posición de trabajo del contrayente
 
-posicion_trabajo_contrayente <- read.csv('./fuente/catalogos/posicion_trabajo_contrayente.csv')
+posicion_trabajo_contrayente <- read.csv('./fuentes/catalogos/posicion_trabajo_contrayente.csv')
 
 matrimonios$postracon1 <- posicion_trabajo_contrayente$descripcion[match(matrimonios$postracon1, posicion_trabajo_contrayente$clave)]
 matrimonios$postracon2 <- posicion_trabajo_contrayente$descripcion[match(matrimonios$postracon2, posicion_trabajo_contrayente$clave)]
 
 ## Tipo de contrayentes
 
-tipo_contrayentes <- read.csv('./fuente/catalogos/tipo_contrayentes.csv')
+tipo_contrayentes <- read.csv('./fuentes/catalogos/tipo_contrayentes.csv')
 
 matrimonios$tipo_con <- tipo_contrayentes$descripcion[match(matrimonios$tipo_con, tipo_contrayentes$clave)]
 
