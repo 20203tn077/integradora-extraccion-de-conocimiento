@@ -74,9 +74,9 @@ matrimonios[is.na(matrimonios$ocup_con1), 13] <- knn(
   matrimonios.completo.1[,13], k = 10
 )
 
-matrimonios[is.na(matrimonios$ocup_con1), 24] <- knn(
+matrimonios[is.na(matrimonios$ocup_con2), 24] <- knn(
   scale(matrimonios.completo.2[,-c(7, 13, 24)]),
-  matrimonios[is.na(matrimonios$ocup_con1), -c(7, 13, 24)],
+  matrimonios[is.na(matrimonios$ocup_con2), -c(7, 13, 24)],
   matrimonios.completo.2[,24], k = 5
 )
 
